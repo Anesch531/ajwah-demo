@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajwah Men Salon — Doha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#d9b45b; --gold-2:#f3dd9a; --ink:#0b0b0d; --ink-2:#141418; --line:#26262c; --txt:#e9e6df; --muted:#9a968d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',"Segoe UI",Tahoma,sans-serif;background:var(--ink);color:var(--txt);line-height:1.65}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.badge-demo{position:fixed;top:12px;right:12px;z-index:99;background:rgba(0,0,0,.72);border:1px solid var(--gold);color:var(--gold-2);font-size:11px;letter-spacing:.5px;padding:6px 12px;border-radius:99px;backdrop-filter:blur(4px)}
+
+header{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(11,11,13,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:'Marcellus',serif;font-size:22px;letter-spacing:3px;color:var(--gold-2)}
+.logo span{color:var(--txt);font-size:11px;letter-spacing:5px;display:block;margin-top:-4px}
+.nav .wa-mini{border:1px solid var(--gold);color:var(--gold-2);padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600}
+.nav .wa-mini:hover{background:var(--gold);color:#000}
+
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;text-align:center;
+ background:linear-gradient(180deg,rgba(11,11,13,.55),rgba(11,11,13,.92)),
+ url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80') center/cover no-repeat}
+.hero .inner{width:100%;padding:120px 20px 80px}
+.stars{color:var(--gold);letter-spacing:4px;font-size:20px}
+.rating-line{font-size:13px;color:var(--muted);margin-top:6px}
+.hero h1{font-family:'Marcellus',serif;font-size:clamp(38px,7vw,72px);letter-spacing:6px;color:#fff;margin:18px 0 6px}
+.hero h1 em{font-style:normal;color:var(--gold-2)}
+.hero p.sub{color:var(--gold-2);letter-spacing:4px;font-size:13px;text-transform:uppercase}
+.hero p.tag{max-width:520px;margin:22px auto 0;color:#d7d3ca;font-size:16px}
+.btns{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 30px;border-radius:10px;font-weight:600;font-size:15px}
+.btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#151109}
+.btn.ghost{border:1px solid #4a4a52;color:#fff}
+.btn:hover{transform:translateY(-2px);transition:.2s}
+
+section{padding:74px 0}
+.sec-title{text-align:center;margin-bottom:44px}
+.sec-title .k{color:var(--gold);letter-spacing:5px;font-size:12px;text-transform:uppercase}
+.sec-title h2{font-family:'Marcellus',serif;font-size:clamp(26px,4vw,38px);margin-top:8px;color:#fff}
+
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:26px 22px;transition:.2s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.card .ic{font-size:26px}
+.card h3{font-size:17px;margin:12px 0 6px;color:#fff;font-weight:600}
+.card p{font-size:13.5px;color:var(--muted)}
+
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gal figure{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#1b1b21,#0f0f12);aspect-ratio:4/3}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.4s;filter:saturate(.9)}
+.gal figure:hover img{transform:scale(1.05)}
+
+.review{max-width:640px;margin:0 auto;text-align:center;background:var(--ink-2);border:1px solid var(--line);border-radius:16px;padding:38px 30px}
+.review .stars{font-size:26px}
+.review h3{color:#fff;font-size:20px;margin:10px 0 4px;font-family:'Marcellus',serif}
+.review p{color:var(--muted);font-size:14px}
+.review a{display:inline-block;margin-top:16px;color:var(--gold-2);font-size:13px;border-bottom:1px dotted var(--gold)}
+
+.info{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.info{grid-template-columns:1fr}}
+.box{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:28px}
+.box h3{font-size:15px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px}
+.box p{font-size:14.5px;color:#cfcbc2;margin-bottom:8px}
+.box .muted{color:var(--muted);font-size:13px}
+
+.cta{text-align:center;background:linear-gradient(135deg,#171410,#0b0b0d);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cta h2{font-family:'Marcellus',serif;font-size:clamp(24px,4vw,34px);color:#fff}
+.cta p{color:var(--muted);margin:12px auto 26px;max-width:460px;font-size:15px}
+
+footer{padding:34px 0 110px;text-align:center;color:var(--muted);font-size:12.5px}
+footer .demo-note{border:1px dashed #3a3a42;border-radius:10px;padding:12px 16px;margin-top:14px;display:inline-block;font-size:11.5px;color:#7d7970}
+
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:98;background:#0f9d58;color:#fff;font-weight:600;padding:14px 22px;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.5);font-size:15px}
+.float-wa:hover{transform:scale(1.04)}
+</style>
+</head>
+<body>
+
+<div class="badge-demo">نموذج توضيحي · Demo preview</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">AJWA<span>MEN SALON · DOHA</span></div>
+    <a class="wa-mini" href="https://wa.me/97466794453?text=Hi%20Ajwah%2C%20I%27d%20like%20to%20book%20an%20appointment">Book on WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <div class="stars">★★★★★</div>
+    <div class="rating-line">5.0 · Google reviews · Fereej Bin Mahmoud, Doha</div>
+    <h1>AJWA <em>H</em></h1>
+    <p class="sub">Gentlemen's Hair Salon</p>
+    <p class="tag">Precision cuts, clean fades and classic shaves — trusted by the men of Bin Mahmoud.</p>
+    <div class="btns">
+      <a class="btn gold" href="https://wa.me/97466794453?text=Hi%20Ajwah%2C%20I%27d%20like%20to%20book%20an%20appointment">Book on WhatsApp →</a>
+      <a class="btn ghost" href="#services">View services</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-title"><div class="k">What we do</div><h2>Services</h2></div>
+    <div class="grid3">
+      <div class="card"><div class="ic">✂️</div><h3>Haircut & Style</h3><p>Classic and modern cuts, finished exactly the way you like it.</p></div>
+      <div class="card"><div class="ic">🧔</div><h3>Beard Trim & Shape</h3><p>Clean lines and shaping that keeps your look sharp for weeks.</p></div>
+      <div class="card"><div class="ic">🪒</div><h3>Hot Towel Shave</h3><p>The traditional straight-razor shave with hot towels.</p></div>
+      <div class="card"><div class="ic">💆</div><h3>Hair & Skin Care</h3><p>Wash, treatments and facials for a full refresh.</p></div>
+      <div class="card"><div class="ic">👦</div><h3>Kids' Cut</h3><p>Patient, friendly cuts for younger gentlemen.</p></div>
+      <div class="card"><div class="ic">🎨</div><h3>Hair Colour</h3><p>Grey blending and colour work done with care.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="sec-title"><div class="k">Our work</div><h2>Gallery</h2></div>
+    <div class="gal">
+      <figure><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80" alt="Haircut in progress" loading="lazy" onerror="this.style.display='none'"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80" alt="Salon interior" loading="lazy" onerror="this.style.display='none'"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Beard styling" loading="lazy" onerror="this.style.display='none'"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80" alt="Barber chair" loading="lazy" onerror="this.style.display='none'"></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <h3>Rated 5.0 on Google</h3>
+      <p>Based on reviews from real customers of Ajwah Men Salon.</p>
+      <a href="https://www.google.com/maps/search/Ajwah+men+salon+Doha" target="_blank" rel="noopener">Read reviews on Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-title"><div class="k">Find us</div><h2>Visit the Salon</h2></div>
+    <div class="info">
+      <div class="box">
+        <h3>Location</h3>
+        <p>Building No: 78, Street 14 (920)<br>Fereej Bin Mahmoud, Doha, Qatar</p>
+        <p class="muted">Easy access from Al Sadd and Al Mansoura.</p>
+        <a class="btn gold" style="display:inline-block;margin-top:14px" href="https://www.google.com/maps/search/Ajwah+men+salon+Doha" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+      <div class="box">
+        <h3>Opening Hours</h3>
+        <p>Saturday – Thursday · 10:00 AM – 12:00 AM</p>
+        <p>Friday · 2:00 PM – 12:00 AM</p>
+        <p class="muted">Walk-ins welcome · Appointments by WhatsApp</p>
+        <a class="btn ghost" style="display:inline-block;margin-top:14px;border-color:#4a4a52" href="https://wa.me/97466794453">Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready for a fresh look?</h2>
+    <p>Message us on WhatsApp — we'll save you a chair.</p>
+    <a class="btn gold" href="https://wa.me/97466794453?text=Hi%20Ajwah%2C%20I%27d%20like%20to%20book%20an%20appointment">WhatsApp the Salon →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    © 2026 Ajwah Men Salon · Fereej Bin Mahmoud, Doha<br>
+    <div class="demo-note">نموذج توضيحي — Demo preview prepared for Ajwah Men Salon. Photos, prices and hours are placeholders to be replaced with the salon's real content.</div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/97466794453?text=Hi%20Ajwah%2C%20I%27d%20like%20to%20book%20an%20appointment">💬 Book on WhatsApp</a>
+
+</body>
+</html>
